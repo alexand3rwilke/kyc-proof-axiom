@@ -3,7 +3,7 @@ pragma solidity ^0.8.19;
 
 import { AxiomV2Client } from "@axiom-crypto/v2-periphery/client/AxiomV2Client.sol";
 
-contract AverageBalance is AxiomV2Client {
+contract ExchangeKYC is AxiomV2Client {
     /// @dev The unique identifier of the circuit accepted by this contract.
     bytes32 immutable QUERY_SCHEMA;
 
@@ -11,6 +11,8 @@ contract AverageBalance is AxiomV2Client {
     uint64 immutable SOURCE_CHAIN_ID;
 
     uint256 private _tokenIdCounter = 0;
+
+    IKycProof public kycProofContract;
 
     function _getNextTokenId() private returns (uint256) {
         return ++_tokenIdCounter;
@@ -33,6 +35,7 @@ contract AverageBalance is AxiomV2Client {
     {
         QUERY_SCHEMA = _querySchema;
         SOURCE_CHAIN_ID = _callbackSourceChainId;
+        kycProofContract = IKycProof(_kycProofAddress);
     }
 
     /// @inheritdoc AxiomV2Client
@@ -62,7 +65,6 @@ contract AverageBalance is AxiomV2Client {
         // `axiomResults` array. Values should be converted into their original types to be used properly.
         address kycAddress = address(uint160(uint256(axiomResults[0])));
         uint256 tokenId = _getNextTokenId();
-        kycProofContract.mint(recipient, tokenId);
-
+        kycRegistry.registerAccount(kycAddress);
     }
 }
