@@ -61,8 +61,14 @@ export default function Home() {
 
   return (
     <>
+      
+
+      <Title>💸 KYC Exchange Prover 💸</Title>
+      <div className="text-center">Select an incomming withdraw transaction from an exchange to get started:</div>
+
+
       <div>
-        <h1>Transactions</h1>
+        <h1>Your incomming withdrawal transactions</h1>
         {transactions.map((tx, index) => (
           <div
             key={index}
@@ -84,9 +90,6 @@ export default function Home() {
           </div>
         ))}
       </div>
-
-      <Title>KYC Bridger</Title>
-      <div className="text-center">Proof that you received funds via an exchange.</div>
 
       {selectedHash && (
         <AdvanceStepButton

@@ -5,7 +5,7 @@ import MainLayout from '@/components/layout/MainLayout';
 import AxiomProvider from './axiomProvider';
 
 export const metadata: Metadata = {
-  title: 'Axiom Next.js Quickstart',
+  title: 'KYC Exchange Prover',
   description: 'A quickstart example that generates a ZK proof of a simple circuit.',
 }
 
