@@ -7,6 +7,7 @@ export const WebappSettings = {
   inputs,
   provider: process.env.NEXT_PUBLIC_PROVIDER_URI_SEPOLIA as string,
   chainId: "11155111",
+  //change to callback contract
   callbackTarget: "0x50F2D5c9a4A35cb922a631019287881f56A00ED5",
   callbackAbi: AverageBalanceAbi,
 }
