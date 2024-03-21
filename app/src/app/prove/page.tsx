@@ -27,8 +27,8 @@ export default async function Prove({ searchParams }: PageProps) {
   // We get the user inputs from the URL query parameters and connected wallet
   const inputs: UserInput<typeof WebappSettings.inputs> = {
     blockNumber: Number(blockNumber),
-    address: connected,
-    txNumber: Number(transactionIndex)
+    txNumber: Number(transactionIndex),
+    address: connected
   }
   console.log(inputs)
 
