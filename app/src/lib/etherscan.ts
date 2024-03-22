@@ -26,8 +26,6 @@ interface EtherscanResponse {
     }>;
   }
   
-  const YOUR_ADDRESS = '0x2f7205f46840A18b98B7F5EC306daf5936434e62';
-  const BINANCE_ADDRESS = '0xdDA015FC1170466309B507269A427E671b932c0D';
   const ETHERSCAN_API_KEY = 'D5WJMUU7XU8CTJ2PMSWMCPI51QZ81TNEUR';
   
   export const getErc20Transfers = async (address: string): Promise<EtherscanResponse | null> => {
