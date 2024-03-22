@@ -26,7 +26,7 @@ interface EtherscanResponse {
     }>;
   }
   
-  const ETHERSCAN_API_KEY = 'D5WJMUU7XU8CTJ2PMSWMCPI51QZ81TNEUR';
+
   
   export const getErc20Transfers = async (address: string): Promise<EtherscanResponse | null> => {
     const url = new URL('https://api-sepolia.etherscan.io/api');
@@ -36,7 +36,7 @@ interface EtherscanResponse {
     url.searchParams.append('startblock', '0');
     url.searchParams.append('endblock', '99999999');
     url.searchParams.append('sort', 'asc');
-    url.searchParams.append('apikey', ETHERSCAN_API_KEY);
+    url.searchParams.append('apikey', process.env.ETHERSCAN_API_KEY as string);
   
     try {
       const response = await fetch(url.toString());
