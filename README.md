@@ -1,10 +1,6 @@
-# Axiom Quickstart
+## KYC Proof
 
-## Introduction
-
-This starter repo is a guide to get you started making your first [Axiom](https://axiom.xyz) query as quickly as possible using the [Axiom SDK](https://github.com/axiom-crypto/axiom-sdk-client) and [Axiom smart contract client](https://github.com/axiom-crypto/axiom-v2-periphery). To learn more about Axiom, check out the developer docs at [docs.axiom.xyz](https://docs.axiom.xyz) or join our developer [Telegram](https://t.me/axiom_discuss).
-
-A guide on how to use this repository is available in the [Axiom Docs: Quickstart](https://docs.axiom.xyz/introduction/quickstart).
+KYC Proof is a POC dapp that uses Axiom to prove that you have withdrawn funds from an exchange in order to add you to a whitelist contract that can be used by contract to verify KYC'd users without KYC.
 
 ## Installation
 

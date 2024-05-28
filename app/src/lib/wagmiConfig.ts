@@ -7,7 +7,7 @@ const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID as string;
 
 const metadata = {
   name: 'Axiom Next.js Scaffold',
-  description: 'Axiom dApp using Next.js',
+  description: 'Axiom proof of KYC via Exchange withdrawals',
   url: 'http://localhost:3000', // origin must match your domain & subdomain
   icons: []
 }

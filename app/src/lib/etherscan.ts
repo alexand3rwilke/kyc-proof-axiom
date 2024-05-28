@@ -29,6 +29,7 @@ interface EtherscanResponse {
 
   
   export const getErc20Transfers = async (address: string): Promise<EtherscanResponse | null> => {
+    console.log("ETHET API : ",process.env.ETHERSCAN_API_KEY as string as string)
     const url = new URL('https://api-sepolia.etherscan.io/api');
     url.searchParams.append('module', 'account');
     url.searchParams.append('action', 'tokentx');
